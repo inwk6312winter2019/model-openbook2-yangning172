@@ -1,5 +1,6 @@
 def extract_data('street_Centrelines.csv')  #a tuple of (STR_NAME,FULL_NAME,FROM_STR,TO_STR)
     f = open('street_Centrelines.csv')
+    f.readline()
     list1 = []
     
     for line in f:
@@ -13,6 +14,7 @@ def extract_data('street_Centrelines.csv')  #a tuple of (STR_NAME,FULL_NAME,FROM
 
 def  histogram(file):
     f = open('street_Centrelines.csv')
+    f.readline()
     list2 = []
     d = dict()
     for line in f:
