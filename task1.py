@@ -28,3 +28,12 @@ def  histogram(file):
     return d
 
 
+
+def unique_owners():
+    f = open('street_Centrelines.csv')
+    f.readline()
+    list2 =[]
+    for line in f:
+        list1 = line.split(',')
+        list2.append(list1[11])     # the index is to OWN
+    return list2
