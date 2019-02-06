@@ -37,3 +37,20 @@ def unique_owners():
         list1 = line.split(',')
         list2.append(list1[11])     # the index is to OWN
     return list2
+
+
+
+def types_of_street():
+    f = open('street_Centrelines.csv')
+    f.readline()
+    list2 = []
+    d = dict()
+    for line in f:
+        list1 = line.split(',')
+        list2.append(list1[10])
+        for n in list2:
+            if n not in d:
+                d[n] = [list1[2]]
+            else:
+                d[n].append(list1[2])
+    return d
